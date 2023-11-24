@@ -43,9 +43,9 @@ const LoginPage = () => {
             <Section typeSection="display_login">
                 <Form onSubmit={handleSubmit(onSubmit)} typeForm="display_login">
                     <label htmlFor="">Email</label>
-                    <StyleInput styleInput="login" {...register("email")} type="email" />
+                    <StyleInput placeholder="Email do admin" styleInput="login" {...register("email")} type="email" />
                     <label htmlFor="">Senha</label>
-                    <StyleInput styleInput="login" {...register("password")} type="password" />
+                    <StyleInput placeholder="Senha do admin" styleInput="login" {...register("password")} type="password" />
                     <StyleButton styleButton="login" type="submit">Entrar</StyleButton>
                 </Form>
             </Section>
