@@ -24,7 +24,7 @@ const read = async (): Promise<any[]> => {
     return orders
 }
 
-const update = async (order: TOrderRequest, orderUpdate: TOrderUpdate): Promise<any> => {
+const update = async (order: TOrderRequest, orderUpdate: any): Promise<any> => {
     const orderData: Order = await orderRepository.save({...orderUpdate, ...order})
     return orderData
 }
