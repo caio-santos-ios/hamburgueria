@@ -9,6 +9,8 @@ import { orderRouter } from "./routers/order.router";
 import { foodRouter } from "./routers/food.router";
 import { tableRouter } from "./routers/table.router";
 import { sessionRouter } from "./routers/session.router";
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './docs/swagger';
 
 export const app = express()
 
@@ -20,5 +22,6 @@ app.use("/orders", orderRouter)
 app.use("/foods", foodRouter)
 app.use("/tables", tableRouter)
 app.use("/session", sessionRouter)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
 app.use(handlerErrorMiddleware)
