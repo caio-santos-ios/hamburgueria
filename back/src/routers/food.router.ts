@@ -14,7 +14,7 @@ export const foodRouter: Router = Router()
  *     summary: Cria um novo alimento
  *     description: Cria um novo alimento no sistema (requer token validado e permissões de administrador)
  *     responses:
- *       200:
+ *       201:
  *         description: Alimento criado com sucesso
  *         content:
  *           application/json:
@@ -60,7 +60,7 @@ foodRouter.patch('/:id', validatedTokenMiddleware, isAdminMiddleware, payloadExi
  *         required: true
  *         description: ID do alimento a ser excluído
  *     responses:
- *       200:
+ *       204:
  *         description: Alimento excluído com sucesso
  */
 foodRouter.delete('/:id', validatedTokenMiddleware, isAdminMiddleware, payloadExistyMiddleware(foodRepository, "Comida não existe"), foodController.destroy)
