@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { waiterSchema } from "./waiter.schema";
 import { tableSchema } from "./table.schema";
+import { userSchema } from "./user.schema";
 
 const orderSchema = z.object({
     id: z.number(),  
@@ -8,7 +8,7 @@ const orderSchema = z.object({
     isDone: z.boolean().default(false),
     valueTotal: z.number(),
     quanty: z.number(),
-    waiter: waiterSchema,
+    user: userSchema,
     table: tableSchema
 })
 
