@@ -41,7 +41,7 @@ const WaiterInitialPage = () => {
                     <Form typeForm="display_waiter_initial" onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor="">Email do colaborador</label>
                         <StyleInput styleInput="login" placeholder="Digite seu nome" {...register("email")} type="text" />
-                        <label htmlFor="">Senha do colaborador</label>
+                        <label htmlFor="">Codigo do colaborador</label>
                         <StyleInput styleInput="login" placeholder="Digite seu codigo" {...register("codeAcess")} type="password" />
                         <StyleButton styleButton="login" type="submit">Entrar</StyleButton>
                     </Form>
